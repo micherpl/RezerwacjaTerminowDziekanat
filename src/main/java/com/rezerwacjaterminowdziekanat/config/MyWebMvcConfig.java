@@ -16,7 +16,7 @@ public class MyWebMvcConfig {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
                 registry.addViewController("/").setViewName(
-                        "forward:/views/index.html");
+                        "/index.html");
             }
         };
     }

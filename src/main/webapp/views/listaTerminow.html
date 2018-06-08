@@ -1,0 +1,9 @@
+
+<button ng-click='onClickFunc()' class="btn btn-default">Dodaj nowy termin</button>
+<button ng-click='initFunc()' class="btn btn-default">Odśwież</button>
+<br>
+<br>
+<div class="panel panel-primary" ng-click='goTo(termin.id)' ng-repeat="termin in terminy | orderBy: 'data_pocz' ">
+    <div class="panel-heading" >{{termin.nazwa}}</div>
+    <div class="panel-body">Kiedy: {{termin.data_pocz | date:'yyyy-MM-dd HH:mm'}}</div>
+</div>

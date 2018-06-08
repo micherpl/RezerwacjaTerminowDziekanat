@@ -1,0 +1,55 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<form name="terminForm" data-toggle="validator" required>
+    <div class="form-group">
+        <div class="form-group row">
+            <label for="title-input" class="col-2 col-form-label">Tytuł</label>
+            <div class="col-10">
+                <input class="form-control" ng-model="termin.nazwa" type="text" placeholder="Wpisz nazwę spotkania" id="title-input" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="description-input" class="col-2 col-form-label">Opis</label>
+            <div class="col-10">
+                <input class="form-control" ng-model="termin.opis" type="text" placeholder="Opisz temat spotkania" id="description-input" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="contact-input" class="col-2 col-form-label">Dane kontaktowe</label>
+            <div class="col-10">
+                <input class="form-control" ng-model="termin.email" type="text" placeholder="Wpisz dane kontaktowe" id="contact-input" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="datetime-input" class="col-2 col-form-label">Data i czas rozpoczęcia</label>
+            <div class="col-10">
+                <input class="form-control" ng-model="termin.data_pocz" placeholder="yyyy-MM-dd HH:mm" min="2018-01-01 00:00" type="datetime-local"  id="datetime-input" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="2nd-datetime-input" class="col-2 col-form-label">Data i czas zakończenia</label>
+            <div class="col-10">
+                <input class="form-control" ng-model="termin.data_kon" placeholder="yyyy-MM-dd HH:mm" min="2018-01-01 00:00" type="datetime-local"  id="2nd-datetime-input" required>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="location.href='/'" class="btn btn-default">Wróć</button>
+    <button type="submit" ng-click='terminForm.$valid && createTermin()' class="btn btn-default">Dodaj ten temin</button>
+</form>
+<script>
+    <!--
+    $(function(){
+        if (!Modernizr.inputtypes.date) {
+            $('input[type=date]').datepicker({
+                    dateFormat : 'yy-mm-dd'
+                }
+            );
+        }
+    });
+    -->
+</script>
