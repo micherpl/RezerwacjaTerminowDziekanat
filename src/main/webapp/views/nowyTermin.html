@@ -1,5 +1,4 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
 <form name="terminForm" data-toggle="validator" required>
     <div class="form-group">
         <div class="form-group row">
@@ -41,15 +40,3 @@
     <button onclick="location.href='/'" class="btn btn-default">Wróć</button>
     <button type="submit" ng-click='terminForm.$valid && createTermin()' class="btn btn-default">Dodaj ten temin</button>
 </form>
-<script>
-    <!--
-    $(function(){
-        if (!Modernizr.inputtypes.date) {
-            $('input[type=date]').datepicker({
-                    dateFormat : 'yy-mm-dd'
-                }
-            );
-        }
-    });
-    -->
-</script>
